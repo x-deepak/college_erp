@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os 
 from pathlib import Path
 import dj_database_url
+
+from dotenv import load_dotenv
+load_dotenv()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -119,6 +123,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR/'static' #specify the directory where the collectstatic command will collect all the static files 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage" #dependency whitenoise
+# used to specify additional directories from which to load static files
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -130,7 +137,3 @@ STATICFILES_DIRS = [
 ]
 
 AUTH_USER_MODEL = 'app.CustomUser'
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-MEDIA_URLS ='/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
