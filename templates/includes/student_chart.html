@@ -1,0 +1,35 @@
+
+<script>
+
+
+    $(document).ready(function() {
+    
+        // Pie chart
+        
+        var options = {
+            series: [{{total_absent}},{{total_present}}],
+            chart: {
+            width: 380,
+            type: 'pie',
+          },
+          labels: ['Absent','Present'],
+          responsive: [{
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200
+              },
+              legend: {
+                position: 'bottom'
+              }
+            }
+          }]
+          };
+    
+          var chart = new ApexCharts(document.querySelector("#att_perc"), options);
+          chart.render();
+    
+      
+    });
+    
+    </script>
