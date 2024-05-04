@@ -7,8 +7,12 @@
     ],
     "routes": [
       {
-        "src": "/(.*)",
-        "dest": "CMR_Attendance_Module/wsgi.py"
+          "src": "/static/(.*)",
+          "dest": "/static/$1"
+      },
+      {
+          "src": "/(.*)",
+          "dest": "CMR_Attendance_Module/wsgi.py"
       }
-    ]
+  ]
   }
