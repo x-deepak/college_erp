@@ -5,18 +5,18 @@
       {% if user.user_type == '1' %}
       <a href="{% url 'hod_home' %}" class="logo">
          {% elif user.user_type == '2' %}
-         <a href="{% url 'staff_home' %}" class="logo"></a>
+         <a href="{% url 'staff_home' %}" class="logo">
          {%else%}
-         <a href="{% url 'student_home' %}" class="logo"></a>
+         <a href="{% url 'student_home' %}" class="logo">
          {% endif %}
          <img src="{% static 'assets/img/logocmr09.png' %}" alt="Logo">
       </a>
       {% if user.user_type == '1' %}
-      <a href="{% url 'hod_home' %}" class="logo logo-small"></a>
+      <a href="{% url 'hod_home' %}" class="logo logo-small">
       {% elif user.user_type == '2' %}
-      <a href="{% url 'staff_home' %}" class="logo logo-small"></a>
+      <a href="{% url 'staff_home' %}" class="logo logo-small">
       {%else%}
-      <a href="{% url 'student_home' %}" class="logo logo-small"></a>
+      <a href="{% url 'student_home' %}" class="logo logo-small">
       {% endif %}
       <img src="{% static 'assets/img/logocmrbig.png' %}" alt="Logo" width="30" height="30">
       </a>
