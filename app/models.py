@@ -13,7 +13,7 @@ class CustomUser(AbstractUser):
         (3,'STUDENT'),
     )
     user_type = models.CharField(choices=USER,max_length=50,default=1)
-    profile_pic = models.ImageField(upload_to='media/profile_pic')
+    profile_pic = models.ImageField(upload_to='profile_pic')
 
 
 # Create Course and session Model  
