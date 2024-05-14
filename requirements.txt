@@ -1,4 +1,4 @@
-Django==3.2.9
+Django==3.2.25
 asgiref==3.8.1
 dj-database-url==2.1.0
 django-active-link==0.1.8
